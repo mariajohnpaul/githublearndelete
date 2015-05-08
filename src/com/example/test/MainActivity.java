@@ -2,8 +2,11 @@ package com.example.test;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -12,6 +15,26 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        String [] As = { "I","Love","You","Tinie"};
+        
+       final TextView tv = (TextView) findViewById(R.id.Button1);
+       while(true)
+       for(final String each : As)
+       {
+    	   
+
+    	    // Execute some code after 2 seconds have passed
+    	    Handler handler = new Handler(); 
+    	    handler.postDelayed(new Runnable() { 
+    	         public void run() { 
+    	        	 tv.setText(each);
+    	      	   tv.setTextSize(50); 
+    	         } 
+    	    }, 2000); 
+       }
+        
+        
     }
 
 

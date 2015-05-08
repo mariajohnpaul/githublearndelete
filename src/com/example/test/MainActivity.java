@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        String [] As = { "I","Love","You","Tinie"};
+        String [] As = { "I","Love","You"};
         
        final TextView tv = (TextView) findViewById(R.id.Button1);
        while(true)
